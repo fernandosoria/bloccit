@@ -19,6 +19,9 @@ gem 'bootstrap-sass', '~> 3.1.1'
 # Use Devise user authentication
 gem 'devise'
 
+# Use Figaro
+gem 'figaro'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
