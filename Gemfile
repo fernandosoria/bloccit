@@ -40,6 +40,9 @@ gem 'jquery-rails'
 # Use Faker to auto generate fake data
 gem 'faker'
 
+# Use Pundit to generate authorization for roles
+gem 'pundit'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
