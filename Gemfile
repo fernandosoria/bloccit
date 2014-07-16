@@ -46,6 +46,9 @@ gem 'pundit'
 # Use Simple Form to generate forms
 gem 'simple_form'
 
+# Use Redcarpet to generate markdown in posts
+gem 'redcarpet'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
