@@ -43,6 +43,9 @@ gem 'faker'
 # Use Pundit to generate authorization for roles
 gem 'pundit'
 
+# Use Simple Form to generate forms
+gem 'simple_form'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
