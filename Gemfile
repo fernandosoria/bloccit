@@ -49,6 +49,15 @@ gem 'simple_form'
 # Use Redcarpet to generate markdown in posts
 gem 'redcarpet'
 
+# Use Carrierwave to allow uploads
+gem 'carrierwave'
+
+# Use Mini Magick to allow image editing
+gem 'mini_magick'
+
+# Use Fog for S3 cloud storage
+gem 'fog'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 

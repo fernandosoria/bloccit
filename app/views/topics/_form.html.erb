@@ -1,0 +1,32 @@
+<%= simple_form_for topic do |f| %>
+  <% if topic.errors.any? %>
+    <div class="alert alert-danger">
+      <h4>There are <%= pluralize(topic.errors.count, "error") %>.</h4>
+      <ul>
+        <% topic.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :name,
+    input_html: {class: 'form-control'},
+    placeholder: 'Enter topic name',
+    wrapper_html: {class: 'form-group'}
+  %>
+
+  <%= f.input :description,
+    input_html: {class: 'form-control', rows: 8},
+    placeholder: 'Enter topic description',
+    wrapper_html: {class: 'form-group'}
+  %>
+
+  <%= f.input :public,
+    label: false,
+    as: :boolean,
+    inline_label: 'Public topic'
+  %>
+  
+  <%= f.submit "Save", class: 'btn btn-success' %>
+<% end %>
