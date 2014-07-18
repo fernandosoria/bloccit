@@ -22,6 +22,13 @@
     wrapper_html: {class: 'form-group'}
   %>
 
+  <%= f.input :image,
+    as: :file,
+    label: false,
+    wrapper_html: {class: 'form-group'}
+  %>
+  <%= f.hidden_field :image_cache %>
+
   <%= f.submit 'Save',
     class: 'btn btn-success'
   %>
