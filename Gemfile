@@ -55,6 +55,9 @@ gem 'carrierwave'
 # Use Mini Magick to allow image editing
 gem 'mini_magick'
 
+# Ue Will Paginate to auto paginate topics and posts
+gem 'will_paginate', '3.0.5'
+
 # Use Fog for S3 cloud storage
 gem 'fog'
 
