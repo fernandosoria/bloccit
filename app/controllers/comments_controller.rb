@@ -5,9 +5,6 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build(comment_params)
     @comment.post = @post
     authorize @comment
-    logger.info "COMMENT BEFORE SAVE #{@comment.inspect}"
-
-
 
     if @comment.save
       flash[:notice] = "Comment was saved"
