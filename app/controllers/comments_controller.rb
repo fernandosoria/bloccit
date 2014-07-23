@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
       redirect_to [@topic, @post]
     end
   end
+  
 
   private
 
