@@ -1,0 +1,11 @@
+<%= simple_form_for [topic, post, post.comments.build] do |f| %>
+  <%= f.input :body,
+    input_html: {class: 'form-control', rows: 8},
+    placeholder: 'Enter comment body',
+    wrapper_html: {class: 'form-group'}
+  %>
+
+  <%= f.submit 'Save',
+    class: 'btn btn-success'
+  %>
+<% end %>

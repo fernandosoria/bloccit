@@ -12,6 +12,12 @@
       <%= @post.user.name %>
     </small>
     <p><%= @post.markdown_body %></p>
+    <h2>Comments</h2>
+    <%= render partial: 'comments/comment', collection: @comments %>
+    <% if policy(Comment).create? %>
+      <h3>Add a comment:</h3>
+      <%= render partial: 'comments/form', locals: {topic: @topic, post: @post} %>
+    <% end %>
   </div>
   <div class="col-md-4">
     <% if policy(@post).edit? %>
