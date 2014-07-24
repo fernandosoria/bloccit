@@ -16,6 +16,10 @@ group :development do
   gem 'better_errors'
 end
 
+group :test do
+  gem 'rspec-rails'
+end
+
 # Use Bootstrap
 gem 'bootstrap-sass', '~> 3.1.1'
 
