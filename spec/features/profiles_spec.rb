@@ -4,13 +4,15 @@ describe "Visiting profiles" do
 
   include TestFactories
 
+  include Warden::Test::Helpers
+  Warden.test_mode!
+
   before do
-    @user = authenticated_user
+    @user = authenticated_user(role: 'admin')
+    login_as(@user, :scope => :user)
     @topic = Topic.create(description: "A topic")
     @post = post_without_user(user: @user, topic: @topic)
-    @comment = Comment.new(user: @user, body: "A Comment")
-    allow(@comment).to receive(:send_favorite_emails)
-    @comment.save
+    @comment = comment_without_email(user: @user)
   end
 
   describe "not signed in" do
