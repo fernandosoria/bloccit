@@ -7,7 +7,7 @@ describe User do
   describe "#favorited(post)" do
 
     before do
-      @topic = Topic.create(name: 'This is my topic title', description: 'This is my topics body text and some more words.')
+      @topic = Topic.create
       @post = post_without_user(topic: @topic)
       @post2 = post_without_user(topic: @topic)
       @user = authenticated_user
