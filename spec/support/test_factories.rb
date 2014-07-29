@@ -7,9 +7,18 @@ module TestFactories
     post
   end
 
-  def authenticated_user
+  def comment_without_email(options={})
+    comment_options = {body: 'A comment.'}.merge(options)
+    comment = Comment.new(comment_options)
+    allow(comment).to receive(:send_favorite_emails)
+    comment.save
+    comment
+  end
+
+  def authenticated_user(options={})
     email = "email#{rand}@fake.com"
-    user = User.new(email: email, password: 'password')
+    user_options = {email: email, password: 'password'}.merge(options)
+    user = User.new(user_options)
     user.skip_confirmation!
     user.save
     user
