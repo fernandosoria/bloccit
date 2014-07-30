@@ -19,6 +19,8 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'capybara', '~> 2.3.0'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 # Use Bootstrap

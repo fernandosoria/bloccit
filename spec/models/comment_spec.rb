@@ -1,14 +1,11 @@
 require 'rails_helper'
 
 describe Comment do
-
-  include TestFactories
-
   describe "after_create" do
     before do
-      @post = post_without_user
-      @user = authenticated_user
-      @comment = Comment.new(body: 'My comment', post: @post, user_id: 10000)
+      @user = create(:user)
+      @post = create(:post)
+      @comment = create(:comment)
     end
 
     context "with user's permission" do
