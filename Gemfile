@@ -69,6 +69,9 @@ gem 'will_paginate', '3.0.5'
 # Use Fog for S3 cloud storage
 gem 'fog'
 
+# Use New Relic for app performance monitoring
+gem 'newrelic_rpm'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
