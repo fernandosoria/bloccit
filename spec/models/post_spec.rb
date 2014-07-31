@@ -31,7 +31,7 @@ describe Post do
   describe 'creation' do
     it "generates an automatic up-vote" do
       user = create(:user)
-      post = create(:post, user: user)
+      post = create(:post_with_user, user: user)
       expect(post.up_votes).to eq(1)
     end
   end
