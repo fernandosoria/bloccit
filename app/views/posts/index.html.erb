@@ -2,7 +2,7 @@
   <div class="col-md-8">
     <h1>Popular Posts</h1>
     <p class="lead">Active posts this week</p>
-    <%= render @posts %>
+    <%= render partial: 'post' %>
     <%= will_paginate @posts %>
   </div>
   <div class="col-md-4">
